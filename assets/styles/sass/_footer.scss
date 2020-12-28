@@ -1,0 +1,74 @@
+.footer {
+  text-align: center;
+  padding: 47px 0 28px;
+  & p {
+    font-size: 14px;
+  }
+  .social {
+    margin-bottom: 47.8px;
+    & p {
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 24px;
+    }
+    font-size: 15px;
+    line-height: 20px;
+    .instagram {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/socialIcons/icon_instagram.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      &:hover {
+        background-image: url("../../images/socialIcons/icon_instagram-hover.svg");
+      }
+    }
+    .facebook {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/socialIcons/icon_facebook.svg");
+      background-size: 9px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+      &:hover {
+        background-image: url("../../images/socialIcons/icon_facebook_hover.svg");
+      }
+    }
+    .twitter {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../images/socialIcons/icon-twitter.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+      &:hover {
+        background-image: url("../../images/socialIcons/icon-twitter-hover.svg");
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 49.5px 0 56.5px;
+    display: flex;
+    justify-content: space-between;
+    & p {
+      font-size: 13px;
+      line-height: 15px;
+    }
+    .social {
+      display: flex;
+      margin-bottom: 0px;
+      & p {
+        font-size: 13px;
+        line-height: 15px;
+        margin-right: 17px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

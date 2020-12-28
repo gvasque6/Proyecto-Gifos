@@ -1,0 +1,118 @@
+#trending__gifs {
+	padding: 46px 0 82px;
+	background-color: $color-gray;
+	text-align: center;
+	#trending__gifs__slider {
+		padding-top: 32px;
+		position: relative;
+		& .trending__gifs__slider__wrapper {
+			width: 243px;
+			height: 187px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		&__next {
+			position: absolute;
+			background-image: url('../../images/slider/Button-Slider-right.svg');
+			width: 40px;
+			height: 40px;
+			top: calc(50% - 10px);
+			right: -21px;
+			&:hover {
+				background-image: url('../../images/slider/Button-Slider-right-hover.svg');
+			}
+		}
+		&__prev {
+			position: absolute;
+			background-image: url('../../images/slider/Button-Slider-left.svg');
+			width: 40px;
+			height: 40px;
+			top: calc(50% - 10px);
+			left: -21px;
+			display: none;
+			&:hover {
+				background-image: url('../../images/slider/button-slider-left-hover.svg');
+			}
+		}
+
+		&__inner {
+			position: relative;
+			display: flex;
+			transition: all 0.5s ease-in-out;
+			right: 0;
+			& .trending__gifs__slider__inner__item {
+				width: 243px;
+				height: 187px;
+				flex-shrink: 0;
+				position: relative;
+				& img {
+					width: 100%;
+					height: 100%;
+				}
+
+				& .trending__gifs__slider__item__hover {
+					display: none;
+					position: absolute;
+					background-color: rgba($color-principal, 0.6);
+					top: 0;
+					bottom: 0;
+					width: 100%;
+					z-index: 10;
+					& > div {
+						display: flex;
+						justify-content: flex-end;
+						& img {
+							width: 32px;
+							height: 32px;
+							margin-right: 10px;
+							margin-top: 10px;
+							opacity: 0.6;
+							&:hover {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	#trending__gifs {
+		padding: 51px 0 182px;
+		#trending__gifs__slider {
+			padding-top: 53px;
+			& .trending__gifs__slider__wrapper {
+				width: 100%;
+				height: initial;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			&__next {
+				right: -62px;
+				top: calc(50%);
+			}
+			&__prev {
+				left: -62px;
+				top: calc(50%);
+			}
+			&__inner {
+				& > div {
+					margin-right: 29px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+				& .trending__gifs__slider__inner__item {
+					width: 357px;
+					height: 275px;
+					&:hover {
+						.trending__gifs__slider__item__hover {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+#trending {
+	text-align: center;
+	padding: 31px 21px 0;
+	& > p {
+		margin-top: 2px;
+		color: $color-principal;
+		font-family: $principal-font;
+		font-size: 14px;
+		line-height: 25px;
+		margin-bottom: 41px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	#trending {
+		padding: 73px 0 0px;
+		& > p {
+			max-width: 399px;
+			font-size: 16px;
+			margin: 0 auto;
+			margin-top: 7px;
+			margin-bottom: 95px;
+		}
+	}
+}

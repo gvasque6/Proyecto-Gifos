@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gifos</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo-desktop.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets//styles/css/normalize.css" />
+    <link rel="stylesheet" href="./assets//styles/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo" id="header_logo"></div>
+        <input type="checkbox" />
+        <div class="header__container__menu">
+          <div class="header__container__menu__line"></div>
+        </div>
+        <nav class="header__container__nav">
+          <ul class="header__container__nav__list">
+            <li><a href="" id="page--mode">MODO NOCTURNO</a></li>
+            <hr />
+            <li><a href="" id="header__fav__button">FAVORITOS</a></li>
+            <hr />
+            <li><a href="" id="header__myGifos__button">MIS GIFOS</a></li>
+          </ul>
+          <a
+            href=""
+            class="header__container__nav__button"
+            id="header__button__create"
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <section id="myGifos">
+      <img src="./assets/images/mygifos/icon-mis-gifos.svg" alt="" />
+      <h2>Mis GIFOS</h2>
+      <div id="myGifos__noContent">
+        <img
+          src="./assets/images/mygifos/icon-mis-gifos-sin-contenido.svg"
+          alt=""
+        />
+        <p>¡Anímate a crear tu primer GIFO!</p>
+      </div>
+      <div id="myGifos__results">
+        <div id="myGifos__results__gifs">
+          <div class="myGifos__results__gifs__gif">
+            <img src="${preview}" alt="" onclick="searchGif('${id}')" />
+            <div class="myGifos__results__gifs__gif__hover">
+              <img
+                src="./assets/images/gifIcons/icon-trash-hover.svg"
+                alt=""
+                onclick="removeFavorite('${id}')"
+                class="fav__icon"
+              />
+              <img
+                src="./assets/images/gifIcons/icon-download-hover.svg"
+                alt=""
+                data-id="${id}"
+                class="download__icon"
+              />
+              <img
+                src="./assets/images/gifIcons/icon-max-hover.svg"
+                alt=""
+                onclick="searchGif('${id}')"
+                class="max__icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="create__gif">
+      <div class="create__gif__content">
+        <div class="create__gif__content__lines TopL"></div>
+        <div class="create__gif__content__lines TopR"></div>
+        <div class="create__gif__content__lines BottomR"></div>
+        <div class="create__gif__content__lines BottomL"></div>
+        <div class="create__gif__content__text" id="text_createGif"></div>
+        <div id="create__gif__content__video">
+          <video src="" id="stream__video"></video>
+        </div>
+      </div>
+      <div class="create__gif__controls">
+        <p id="create__gif__controls-1" class="active">1</p>
+        <p id="create__gif__controls-2">2</p>
+        <p id="create__gif__controls-3">3</p>
+      </div>
+      <button id="create__gif__button">COMENZAR</button>
+      <button id="recording__gif__button">GRABAR</button>
+    </section>
+    <!-- MAIN -->
+    <section id="home">
+      <main id="main">
+        <h1 class="main__title">
+          Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span>
+        </h1>
+        <img
+          src="./assets/images/general/ilustra_header.svg"
+          alt=""
+          srcset=""
+          class="main__img"
+        />
+        <form action="" id="main__form">
+          <input type="text" id="main__input" placeholder="Busca GIFOS y más" />
+        </form>
+        <div class="main__suggestBar">
+          <hr />
+          <ul id="suggest__list">
+            <!--  LIST HERE -->
+          </ul>
+        </div>
+      </main>
+      <div id="trending">
+        <!-- TEXT HERE -->
+      </div>
+      <div id="searchResults">
+        <hr />
+        <h2 id="searchResults__title"></h2>
+        <div class="container__standard" id="searchResults__gifs"></div>
+        <div class="container__standard" id="searchResults__no">
+          <img
+            src="./assets/images/search/icon-busqueda-sin-resultado.svg"
+            alt=""
+          />
+          <p>Intenta con otra búsqueda.</p>
+        </div>
+
+        <button id="searchResults__button">VER MAS</button>
+      </div>
+    </section>
+    <section id="favorites">
+      <img src="./assets/images/favoritesIcons/icon-favoritos.svg" alt="" />
+      <h2>Favoritos</h2>
+      <div id="favorites__noResults">
+        <img
+          src="./assets/images/favoritesIcons/icon-fav-sin-contenido.svg"
+          alt=""
+        />
+        <p>"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"</p>
+      </div>
+      <div id="favorites__results">
+        <div id="favorites__results__gifs"></div>
+        <button id="favorites__results__button">VER MAS</button>
+      </div>
+    </section>
+    <section id="trending__gifs">
+      <div class="container__standard">
+        <h2>Trending GIFOS</h2>
+        <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+        <div id="trending__gifs__slider">
+          <div
+            class="trending__gifs__slider__wrapper"
+            id="trending__gifs__slider__wrapper"
+          >
+            <div id="trending__gifs__slider__inner">
+              <!-- ITEMS HERE -->
+            </div>
+          </div>
+          <div id="trending__gifs__slider__next"></div>
+          <div id="trending__gifs__slider__prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container__standard">
+      <footer class="footer">
+        <div class="social">
+          <p>Compartir en:</p>
+          <a href="" class="facebook"></a>
+          <a href="" class="twitter"></a>
+          <a href="" class="instagram"></a>
+        </div>
+        <p>© GIFOS 2020 All Rights Reserved.</p>
+      </footer>
+    </div>
+    <div class="modal" id="modal">
+      <div id="modal__content" class="modal__content">
+        <img src="./assets/images/search/close.svg" alt="close icon" />
+      </div>
+    </div>
+  </body>
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  <script src="./assets/js/gifClass.js"></script>
+  <script src="./assets/js/nocturneMode.js"></script>
+  <script src="./assets/js/maximixeGif.js"></script>
+  <script src="./assets/js/favorites.js"></script>
+  <script src="./assets/js/slider.js"></script>
+  <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/createGif.js"></script>
+  <script src="./assets/js/myGifos.js"></script>
+  <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/downloadGif.js"></script>
+  <script src="./assets/js/localStorage.js"></script>
+</html>

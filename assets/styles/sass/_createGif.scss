@@ -1,0 +1,167 @@
+#create__gif {
+  padding: 4px 21px 96.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  display: none;
+  & .create__gif__content {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    height: 390px;
+    border: 1px solid $color-principal;
+    display: flex;
+    justify-content: center;
+    & #create__gif__content__video {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      left: 20px;
+      bottom: 20px;
+      & video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__lines {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      &.TopL {
+        left: 20px;
+        top: 20px;
+        border-top: 1px solid $color-secondary;
+        border-left: 1px solid $color-secondary;
+      }
+      &.TopR {
+        top: 20px;
+        right: 20px;
+        border-top: 1px solid $color-secondary;
+        border-right: 1px solid $color-secondary;
+      }
+      &.BottomL {
+        bottom: 20px;
+        left: 20px;
+        border-bottom: 1px solid $color-secondary;
+        border-left: 1px solid $color-secondary;
+      }
+      &.BottomR {
+        bottom: 20px;
+        right: 20px;
+        border-bottom: 1px solid $color-secondary;
+        border-right: 1px solid $color-secondary;
+      }
+    }
+    &__text {
+      align-self: flex-end;
+      text-align: center;
+      justify-content: center;
+      & h1 {
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 550px;
+      }
+      & p {
+        max-width: 446px;
+        height: 135px;
+        font-size: 16px;
+        line-height: 29px;
+        margin: 0 auto;
+        margin-bottom: 28px;
+      }
+    }
+  }
+  & .create__gif__controls {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 24px 0 19px;
+    border-bottom: 3px solid $color-principal;
+    & #create__gif__controls-1 {
+      width: 32px;
+      line-height: 32px;
+      border-radius: 50%;
+      border: 1px solid $color-principal;
+      margin-right: 32px;
+      &.active {
+        background-color: $color-principal;
+        color: #fff;
+      }
+    }
+    & #create__gif__controls-2 {
+      width: 32px;
+      line-height: 32px;
+      border-radius: 50%;
+      border: 1px solid $color-principal;
+      margin-right: 32px;
+      &.active {
+        background-color: $color-principal;
+        color: #fff;
+      }
+    }
+    & #create__gif__controls-3 {
+      width: 32px;
+      line-height: 32px;
+      border-radius: 50%;
+      border: 1px solid $color-principal;
+
+      &.active {
+        background-color: $color-principal;
+        color: #fff;
+      }
+    }
+  }
+  &__button {
+    width: 127px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid $color-principal;
+    color: $color-principal;
+    position: absolute;
+    bottom: 23px;
+    left: calc(50% - 63.5px);
+    background-color: transparent;
+    &:hover {
+      background-color: $color-principal;
+      color: #fff;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  & #recording__gif__button {
+    display: none;
+    width: 127px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid $color-principal;
+    color: $color-principal;
+    position: absolute;
+    bottom: 23px;
+    left: calc(50% - 63.5px);
+    background-color: transparent;
+    &:hover {
+      background-color: $color-principal;
+      color: #fff;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #create__gif {
+    .create__gif__content {
+      width: 688px;
+      height: 390px;
+    }
+    & .create__gif__controls {
+      width: 65.3%;
+    }
+  }
+}

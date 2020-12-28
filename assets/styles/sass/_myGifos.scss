@@ -1,0 +1,71 @@
+#myGifos {
+	display: none;
+	text-align: center;
+	padding: 10px 21px 0;
+	&__noContent {
+		padding: 111px 0 136px;
+		& p {
+			margin-top: 40px;
+			line-height: 25px;
+			font-size: 22px;
+			color: $color-secondary;
+		}
+	}
+	&__results {
+		display: none;
+		&__gifs {
+			padding: 46px 0 78px;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 156px);
+			grid-auto-rows: 120px;
+			justify-content: center;
+			gap: 21px;
+
+			& .myGifos__results__gifs__gif {
+				position: relative;
+				& img {
+					width: 100%;
+					height: 100%;
+				}
+				&__hover {
+					position: absolute;
+					background-color: rgba($color-principal, 0.6);
+					top: 0;
+					width: 100%;
+					bottom: 0;
+					display: flex;
+					justify-content: flex-end;
+					opacity: 0;
+					&:hover {
+						opacity: 1;
+					}
+					& img {
+						width: 22px;
+						height: 22px;
+						margin-right: 8px;
+						margin-top: 10px;
+						opacity: 0.6;
+						&:hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	#myGifos {
+		&__results {
+			&__gifs {
+				padding: 36px 160px 78px;
+				margin: 0 auto;
+				max-width: 1440px;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-auto-rows: minmax(auto, 200px);
+				gap: 29px;
+			}
+		}
+	}
+}

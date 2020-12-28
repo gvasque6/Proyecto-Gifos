@@ -1,0 +1,99 @@
+#main {
+	text-align: center;
+	padding-top: 7px;
+	position: relative;
+	& .main {
+		&__suggestBar {
+			display: none;
+			background-color: #fff;
+			position: absolute;
+			left: 5.4%;
+			width: 89.15%;
+			border: 1px solid $color-principal;
+			border-top: none;
+			top: 98%;
+			border-radius: 0 0 27px 27px;
+			z-index: 20;
+			& hr {
+				width: 96.8%;
+				margin: 0 auto;
+				background-color: #9cafc3;
+			}
+			& a {
+				font-family: $secondary-font;
+				color: #9cafc3;
+				font-weight: 400;
+				display: inline-flex;
+				align-items: center;
+			}
+			& ul {
+				padding: 14px 3.6% 18px;
+				& li {
+					text-align: left;
+					margin-bottom: 10px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					& img {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+		&__title {
+			max-width: 286px;
+			margin: 0 auto 31px;
+		}
+		&__img {
+			width: 72.8%;
+		}
+	}
+	&__input {
+		width: 89.1%;
+		border: 1px solid $color-principal;
+		border-radius: 27px;
+		padding: 15px 50px 13px 55px;
+		font-family: $secondary-font;
+		background-image: url('../../images/search/icon-search.svg');
+		background-repeat: no-repeat;
+		background-position: 97% center;
+		position: relative;
+		top: -4px;
+		&:focus {
+			outline: none;
+		}
+		&.active {
+			background-image: url('../../images/search/icon-search-modo-noct.svg'), url('../../images/search/close.svg');
+			background-position: 3% center, 97% center;
+			border-bottom: none;
+			border-radius: 27px 27px 0 0;
+			color: #000;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#main {
+		text-align: center;
+		padding-top: 76px;
+		& .main {
+			&__suggestBar {
+				width: 551px;
+				left: calc(50% - 275.5px);
+			}
+			&__title {
+				max-width: 780px;
+				margin: 0 auto 24px;
+				text-align: center;
+			}
+			&__img {
+				width: 399px;
+			}
+		}
+		&__input {
+			display: block;
+			width: 551px;
+			margin: 0 auto;
+		}
+	}
+}

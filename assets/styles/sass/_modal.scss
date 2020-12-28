@@ -1,0 +1,87 @@
+.modal {
+	position: fixed;
+	display: none;
+	top: 0;
+	width: 100%;
+	bottom: 0;
+	background-color: rgba(#fff, 0.9);
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	&__content {
+		max-width: 1440px;
+		flex: 1;
+		padding: 76px 29px;
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		position: relative;
+		& > img {
+			width: 24px;
+			position: absolute;
+			right: 21px;
+			top: 0;
+		}
+		&__card {
+			align-self: center;
+			justify-self: center;
+			width: 100%;
+
+			&__image {
+				& img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			&__info {
+				padding-top: 14px;
+				text-align: left;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&__images {
+					display: flex;
+
+					& img {
+						margin: 0;
+						width: 36px;
+						margin-right: 10px;
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+				& h3 {
+					color: #000;
+				}
+				& p {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	.modal {
+		&__content {
+			padding: 67px 268px;
+			& > img {
+				right: 278px;
+			}
+			&__card {
+				width: 695px;
+				&__image {
+					max-width: initial;
+					width: 100%;
+					height: 385px;
+				}
+				&__info {
+					padding-top: 27px;
+					& img {
+						width: 27px;
+					}
+				}
+			}
+		}
+	}
+}
